@@ -1,5 +1,5 @@
 {% set name = "atomap" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0693d9632cab92e3058298700825bfdca84e45fede11c0504cb644d75e6f23b3
+  sha256: 2334b9c1ef4f756efe2945a1f08da498dc6b7e65ecc019d043be7a1feeff7c08
 
 build:
   noarch: python
