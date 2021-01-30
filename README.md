@@ -5,9 +5,13 @@ Home: https://atomap.org
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atomap-feedstock/blob/master/LICENSE.txt)
 
 Summary: Library for analysing atomic resolution images
+
+Development: https://gitlab.com/atomap/atomap
+
+Documentation: https://atomap.org/install.html
 
 Atomap is a Python library for analysing atomic resolution
 scanning transmission electron microscopy images.
