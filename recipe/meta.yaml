@@ -1,5 +1,5 @@
 {% set name = "atomap" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2334b9c1ef4f756efe2945a1f08da498dc6b7e65ecc019d043be7a1feeff7c08
+  sha256: e771be616999ff40aafd6d462d74a52ddab3e7c27e7dd08145d2a9455fefda31
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -20,14 +20,16 @@ requirements:
     - pip
   run:
     - python >=3
-    - scipy
+    - scipy >=1.4.0
     - numpy >=1.13
     - h5py
     - matplotlib-base >=3.1.0
     - tqdm
-    - scikit-image >=0.13
+    - scikit-image >=0.17.1
     - scikit-learn
     - hyperspy-base >=1.5.2
+    - numba
+    - ase >=3.17.0
 
 test:
   imports:
