@@ -27,7 +27,7 @@ requirements:
     - tqdm
     - scikit-image >=0.17.1
     - scikit-learn
-    - hyperspy-base >=1.5.2, <2.0.0
+    - hyperspy >=2.0.0
     - numba
     - ase >=3.17.0
     - exspy
