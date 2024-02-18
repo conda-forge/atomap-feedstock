@@ -1,5 +1,5 @@
 {% set name = "atomap" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 805fde782ec8a1706fa667a5700c740ab6465ac7ac167a761c16af16a975fd1e
+  sha256: 2c3b02ca58e7628e318302014129ca7bcdaaa5717f4bc8bb441e5fd068e135c6
 
 build:
   noarch: python
@@ -27,9 +27,10 @@ requirements:
     - tqdm
     - scikit-image >=0.17.1
     - scikit-learn
-    - hyperspy-base >=1.5.2, <2.0.0
+    - hyperspy >=2.0.0
     - numba
     - ase >=3.17.0
+    - exspy
 
 test:
   imports:
