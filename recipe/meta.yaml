@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d5e4283535f1f2da687ee4aa5f8eedfb5c5e570873ac4f52e46b10cf0bee9375
 
 build:
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3
+    - python >={{ python_min }}
     - scipy >=1.4.0
     - numpy >=1.13
     - h5py
@@ -34,6 +34,8 @@ requirements:
     - exspy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - atomap
   commands:
